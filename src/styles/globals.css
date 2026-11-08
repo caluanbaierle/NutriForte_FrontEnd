@@ -1,0 +1,29 @@
+@import './variables.css';
+@import './components.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-cream font-sans text-charcoal;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 0% 0%, rgba(122, 158, 138, 0.12), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(27, 94, 69, 0.06), transparent);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  h1,
+  h2,
+  .brand-heading {
+    @apply font-display;
+  }
+}

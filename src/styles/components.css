@@ -1,0 +1,95 @@
+@layer components {
+  .nf-card {
+    @apply rounded-[var(--radius-lg)] border border-sage-muted/40 bg-white p-5 shadow-soft;
+  }
+
+  .nf-page {
+    @apply mx-auto w-full max-w-6xl space-y-6 p-4 md:p-6 lg:p-8;
+  }
+
+  .nf-label {
+    @apply mb-1.5 block text-sm font-medium text-charcoal;
+  }
+
+  .nf-input {
+    @apply w-full rounded-[var(--radius-md)] border border-sage-muted bg-white px-3 py-2.5 text-sm text-charcoal
+      outline-none transition focus:border-forest focus:ring-2 focus:ring-forest/20;
+  }
+
+  .nf-input:disabled {
+    @apply cursor-not-allowed bg-cream-dark opacity-70;
+  }
+
+  .nf-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] px-4 py-2.5 text-sm font-semibold
+      transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .nf-btn-primary {
+    @apply nf-btn bg-forest text-white hover:bg-forest-dark focus-visible:outline-forest;
+  }
+
+  .nf-btn-secondary {
+    @apply nf-btn border border-sage bg-white text-forest hover:bg-cream focus-visible:outline-sage;
+  }
+
+  .nf-btn-danger {
+    @apply nf-btn bg-[var(--color-danger)] text-white hover:opacity-90 focus-visible:outline-[var(--color-danger)];
+  }
+
+  .nf-btn-ghost {
+    @apply nf-btn bg-transparent text-charcoal-muted hover:bg-cream-dark hover:text-charcoal;
+  }
+
+  .nf-table-wrap {
+    @apply overflow-x-auto rounded-[var(--radius-lg)] border border-sage-muted/40 bg-white shadow-soft;
+  }
+
+  .nf-table {
+    @apply w-full min-w-[640px] border-collapse text-left text-sm;
+  }
+
+  .nf-table th {
+    @apply border-b border-sage-muted/50 bg-cream px-4 py-3 font-semibold text-charcoal-muted;
+  }
+
+  .nf-table td {
+    @apply border-b border-sage-muted/30 px-4 py-3 align-middle;
+  }
+
+  .nf-tabs {
+    @apply flex flex-wrap gap-1 border-b border-sage-muted/50;
+  }
+
+  .nf-tab {
+    @apply rounded-t-md px-4 py-2.5 text-sm font-medium text-charcoal-muted transition hover:text-forest;
+  }
+
+  .nf-tab-active {
+    @apply border-b-2 border-forest text-forest;
+  }
+
+  .nf-page-wide {
+    @apply max-w-7xl;
+  }
+
+  .nf-origin {
+    @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide;
+  }
+
+  .nf-origin-backend {
+    @apply bg-[var(--color-success-bg)] text-[var(--color-success)];
+  }
+
+  .nf-origin-pending {
+    @apply bg-[var(--color-warning-bg)] text-[var(--color-warning)];
+  }
+
+  .nf-origin-unavailable {
+    @apply bg-cream-dark text-charcoal-muted;
+  }
+
+  .nf-assessment-metric {
+    @apply min-h-[8.5rem];
+  }
+}
